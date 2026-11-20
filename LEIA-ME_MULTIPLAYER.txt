@@ -1,0 +1,31 @@
+NEON RIFT — MULTIPLAYER EM REDE LOCAL (LAN)
+===========================================
+
+REQUISITOS
+- Windows 10 ou 11
+- Node.js LTS instalado no computador que vai hospedar
+- Todos os computadores conectados à mesma rede Wi-Fi/LAN
+- Navegador atualizado e conexão local entre os computadores
+
+COMO HOSPEDAR
+1. Extraia todo o ZIP para uma pasta.
+2. Instale o Node.js LTS: https://nodejs.org/ (somente na primeira vez e no PC anfitrião).
+3. Dê dois cliques em INICIAR_SERVIDOR.bat.
+4. Na primeira execução, o Windows pode perguntar se permite acesso à rede. Permita em redes privadas.
+5. Deixe a janela preta aberta.
+6. Descubra o IPv4 do anfitrião: abra o Prompt de Comando, digite ipconfig e procure Endereço IPv4 do adaptador Wi-Fi (ex.: 192.168.0.25).
+7. Abra NEON_RIFT_dificuldade_corrigida.html no navegador do anfitrião. No menu, Multiplayer > Criar sala.
+
+COMO ENTRAR
+1. Cada amigo abre sua própria cópia de NEON_RIFT_dificuldade_corrigida.html.
+2. Vai em Multiplayer > Entrar em sala.
+3. Digita o IPv4 do anfitrião, a porta 3000 e o código da sala.
+4. O anfitrião inicia a partida quando todos estiverem na sala.
+
+OBSERVAÇÕES IMPORTANTES DESTA VERSÃO
+- A sala aceita até 8 jogadores e o servidor controla esse limite.
+- O servidor só funciona na rede local; não configure encaminhamento de portas no roteador.
+- Esta entrega implementa conexão, salas, lista de jogadores, início sincronizado e avatares/posições remotas.
+- O combate e a simulação dos inimigos ainda são executados localmente em cada cópia do jogo. Portanto, vida/dano, mortes de inimigos, munição, pontuação e conclusão de fase ainda NÃO são compartilhados de forma autoritativa entre todos. Esta é a primeira etapa multiplayer, não um co-op completo sincronizado.
+- A página usa Three.js carregado de CDN, então o navegador precisa de acesso à internet para baixar o motor 3D na primeira abertura/cache.
+- Se os amigos não conseguirem conectar, confira se estão na mesma rede, se o IP está correto e se o Firewall do Windows liberou Node.js na rede privada.
